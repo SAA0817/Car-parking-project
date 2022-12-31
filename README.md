@@ -1,4 +1,4 @@
-### 本项目所有代码均需在 命令行/terminal 中运行
+### 并不是本项目所有代码均需在 命令行/terminal 中运行
 
 ```
 cd Parking_DQN
