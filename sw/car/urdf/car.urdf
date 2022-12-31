@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="car">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-9.75905160029282E-17 0.01 -2.66582829339586E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.22" />
+      <inertia
+        ixx="6.27916666666666E-05"
+        ixy="5.12014475956279E-22"
+        ixz="5.66314934761598E-21"
+        iyy="0.000788791666666666"
+        iyz="0"
+        izz="0.000740666666666666" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LT">
+    <inertial>
+      <origin
+        xyz="0 3.29597460435593E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0424115008234622" />
+      <inertia
+        ixx="1.03378033257189E-05"
+        ixy="2.64697796016969E-23"
+        ixz="6.65955313054933E-40"
+        iyy="1.03378033257189E-05"
+        iyz="-3.44318714584968E-38"
+        izz="1.9085175370558E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/LT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/LT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LT"
+    type="revolute">
+    <origin
+      xyz="0.07 0.0775 0"
+      rpy="1.5708 0.019339 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LT" />
+    <axis
+      xyz="0.019338 -0.99981 0" />
+    <limit
+      lower="-0.78539"
+      upper="0.78539"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LF">
+    <inertial>
+      <origin
+        xyz="0 3.29597460435593E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0424115008234622" />
+      <inertia
+        ixx="1.03378033257189E-05"
+        ixy="0"
+        ixz="6.65955313054933E-40"
+        iyy="1.03378033257189E-05"
+        iyz="-3.44318714584968E-38"
+        izz="1.9085175370558E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="LT" />
+    <child
+      link="LF" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-120"
+      upper="120"
+      effort="0"
+      velocity="20" />
+  </joint>
+  <link
+    name="RT">
+    <inertial>
+      <origin
+        xyz="0 3.29597460435593E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0424115008234622" />
+      <inertia
+        ixx="1.03378033257189E-05"
+        ixy="1.44813871407676E-38"
+        ixz="-1.83670992315982E-38"
+        iyy="1.03378033257189E-05"
+        iyz="-3.44383110592467E-38"
+        izz="1.9085175370558E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/RT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/RT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RT"
+    type="revolute">
+    <origin
+      xyz="0.07 -0.0775 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RT" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.78539"
+      upper="0.78539"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RF">
+    <inertial>
+      <origin
+        xyz="0 3.29597460435593E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0424115008234622" />
+      <inertia
+        ixx="1.03378033257189E-05"
+        ixy="1.44813871407675E-38"
+        ixz="0"
+        iyy="1.03378033257189E-05"
+        iyz="-3.44383110592467E-38"
+        izz="1.9085175370558E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="RT" />
+    <child
+      link="RF" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-120"
+      upper="120"
+      effort="0"
+      velocity="20" />
+  </joint>
+  <link
+    name="LB">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 1.04083408558608E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0424115008234622" />
+      <inertia
+        ixx="1.03378033257189E-05"
+        ixy="-7.41153828847513E-22"
+        ixz="1.47132898176964E-37"
+        iyy="1.03378033257189E-05"
+        iyz="-1.94259249332072E-38"
+        izz="1.9085175370558E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/LB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/LB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LB"
+    type="continuous">
+    <origin
+      xyz="-0.07 0.0775 0"
+      rpy="1.5708 0.15842 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LB" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-120"
+      upper="120"
+      effort="100"
+      velocity="20" />
+  </joint>
+  <link
+    name="RB">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0424115008234622" />
+      <inertia
+        ixx="1.03378033257189E-05"
+        ixy="0"
+        ixz="0"
+        iyy="1.03378033257189E-05"
+        iyz="-1.84407463356536E-38"
+        izz="1.9085175370558E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/RB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car/meshes/RB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RB"
+    type="continuous">
+    <origin
+      xyz="-0.07 -0.0775 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RB" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-120"
+      upper="120"
+      effort="100"
+      velocity="20" />
+  </joint>
+</robot>
