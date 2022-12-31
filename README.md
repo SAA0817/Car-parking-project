@@ -1,8 +1,18 @@
-### 并不是本项目所有代码均需在 命令行/terminal 中运行
+### 如何运行
+
+在文件所在目录下，右键选择在终端中打开，或使用
 
 ```
 cd Parking_DQN
 ```
+命令抵达Parking_DQN目录
+
+运行
+
+```
+pip install -r requirements.txt
+```
+安装环境
 
 测试小车
 
